@@ -9,7 +9,7 @@ const Fon = () => {
   return (
     <div className="container mx-auto">
       <p className="text-[36px] text font-[700] mt-[-100px] mb-11">Контакты</p>
-      <div className="flex gap-3 sm:flex-col md:flex-col items-center justify-center box">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-start ">
         <div className="">
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-start">
             <div>
@@ -22,7 +22,7 @@ const Fon = () => {
               <p>Ул. Первомайская</p>
               <p>Д. 1, Кв. 43</p>
             </div>
-            <div>
+            <div className="w-[250px]">
               <p>ОГРН: 3748 49384 4847 30948</p>
               <p>ООО “Икеа”</p>
               <p>Политика конфиденциальности</p>
@@ -34,7 +34,7 @@ const Fon = () => {
             <IoLogoGoogleplus className="text-[30px]" />
           </div>
         </div>
-        <div className=" mt-[-120px] w-[450px] ml-20 sm:flex-none sm:mt-0 md:mt-[0]">
+        <div className=" lg:mt-[-120px] lg:w-[450px] sm:mt-[0]">
           <img className="" src={kontact} alt="" />
         </div>
       </div>
