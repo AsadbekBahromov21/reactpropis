@@ -3,6 +3,7 @@ import "./json.css";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import axios from "axios";
 import { data } from "autoprefixer";
+import { Link } from "react-router-dom";
 const API_URL = "https://dummyjson.com";
 const Json = () => {
   const [products, setProducts] = useState(null);
@@ -58,11 +59,13 @@ const Json = () => {
       key={product.id}
       className="p-3 h-[398px] overflow-hidden api border flex flex-col gap-4 items-center justify-center rounded-lg shadow-md relative"
     >
-      <img
-        src={product.images[0]}
-        alt=""
-        className="duration-300 image w-full h-52 object-contain hover:scale-105 absolute top-0 left-0"
-      />
+      <Link to={`/product/${product.id}`}>
+        <img
+          src={product.images[0]}
+          alt=""
+          className="duration-300 image w-full h-52 object-contain hover:scale-105 absolute top-0 left-0"
+        />
+      </Link>
       <div className="w-full h-52"></div>
       <div className="flex flex-col gap-2 ">
         <h3 className="text-center text-xl font-semibold">{product.brand}</h3>

@@ -36,7 +36,7 @@ const Header = () => {
   // const links = ["Каталог", "Доставка", " Условия", "Контакты"];
   const number = ["+ 375 736 463 64 72  /+ 375 736 463 64 72"];
   return (
-    <div className="header bg-slate-200 mb-32">
+    <div className="header bg-slate-200 mb-32 ">
       <div className="container mx-auto ">
         <nav className="navbar py-5 flex items-center justify-between">
           <div className="navbar__logo">
@@ -58,6 +58,9 @@ const Header = () => {
               </NavLink>
               <NavLink className={"text-[#000] "} to={"/Контакты"}>
                 Контакты
+              </NavLink>
+              <NavLink className={"text-[#000] "} to={"/login"}>
+                Login
               </NavLink>
             </ul>
           </div>

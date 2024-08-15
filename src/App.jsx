@@ -10,6 +10,11 @@ import About from "./pages/About/About";
 import Dastafka from "./pages/dastafka/Dastafka";
 import Uslovenne from "./pages/uslovenne/Uslovenne";
 import Contact from "./pages/contact/Contact";
+import Product from "./components/product/Product";
+import Login from "./pages/login/Login";
+import Admin from "./pages/admin/Admin";
+import CreateProduct from "./pages/admin/CreateProduct";
+import Maninj from "./pages/admin/Maninj";
 function App() {
   return (
     <>
@@ -20,6 +25,12 @@ function App() {
         <Route path="/Доставка" element={<Dastafka />} />
         <Route path="*" element={<Uslovenne />} />
         <Route path="/Контакты" element={<Contact />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/Admin/*" element={<Admin />}>
+          <Route path="create" element={<CreateProduct />} />
+          <Route path="maninj" element={<Maninj />} />
+        </Route>
       </Routes>
       <Footer />
     </>
